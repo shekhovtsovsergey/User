@@ -1,0 +1,9 @@
+image:
+  repository: postgres
+  tag: 13.2
+  pullPolicy: IfNotPresent
+postgresPassword: some_password
+postgresUser: some_user
+postgresDatabase: some_db
+service:
+  port: 5433
