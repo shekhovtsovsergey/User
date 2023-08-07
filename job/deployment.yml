@@ -4,7 +4,7 @@ metadata:
   name: db-secrets
 type: Opaque
 data:
-  DB_HOST: amRiYzpwb3N0Z3Jlc3FsOi8vbG9jYWxob3N0OjU0MzMvc29tZV9kYg==
+  DB_HOST: amRiYzpwb3N0Z3Jlc3FsOi8vbXktcG9zdGdyZXMtcG9zdGdyZXNxbDo1NDMzL3NvbWVfZGI=
   DB_PORT: NTQzMw==
   DB_NAME: c29tZV9kYg==
   DB_USER: c29tZV91c2Vy

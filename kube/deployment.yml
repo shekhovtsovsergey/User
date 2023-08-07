@@ -4,11 +4,11 @@ metadata:
   name: db-secrets
 type: Opaque
 data:
-  DB_HOST: "amRiYzppZGJjOnBvc3RncmVzc2FsOi8vbG9jYWxob3N0OjU0MzMvc29tZV9kYg=="
-  DB_PORT: "NTQzMg=="
-  DB_NAME: "c29tZV9kYg=="
-  DB_USER: "c29tZV91c2Vy"
-  DB_PASSWORD: "c29tZV9wYXNzd29yZA=="
+  DB_HOST: amRiYzpwb3N0Z3Jlc3FsOi8vbXktcG9zdGdyZXMtcG9zdGdyZXNxbDo1NDMzL3NvbWVfZGI=
+  DB_PORT: NTQzMw==
+  DB_NAME: c29tZV9kYg==
+  DB_USER: c29tZV91c2Vy
+  DB_PASSWORD: c29tZV9wYXNzd29yZA==
 
 ---
 apiVersion: batch/v1
@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
         - name: flyway-job
-          image: 89629417575/lesson7-sql
+          image: 89629417575/lesson7-sql-2
           imagePullPolicy: Always
           env:
             - name: FLYWAY_URL
@@ -58,7 +58,7 @@ spec:
     spec:
       containers:
         - name: myapp-container
-          image: 89629417575/lesson7-image
+          image: 89629417575/lesson7-image-2
           ports:
             - containerPort: 8000
           livenessProbe:
@@ -105,3 +105,17 @@ spec:
                 name: myapp-service
                 port:
                   number: 80
+---
+controller:
+  kind: DaemonSet
+
+  reportNodeInternalIp: true
+
+  hostPort:
+    enabled: true
+    ports:
+      http: 80
+      https: 443
+
+  service:
+    type: NodePort
