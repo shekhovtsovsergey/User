@@ -1,0 +1,11 @@
+auth:
+  username: some_user
+  password: some_password
+  database: some_db
+primary:
+  persistence:
+    enabled: false
+  service:
+    ports:
+      postgresql: 5433
+

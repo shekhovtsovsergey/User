@@ -1,0 +1,7 @@
+DROP TABLE IF EXISTS USERS;
+
+CREATE TABLE USERS
+(
+    ID             BIGSERIAL        PRIMARY KEY,
+    NAME           VARCHAR(255)     NOT NULL
+);
